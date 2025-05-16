@@ -1,1 +1,19 @@
-<app-header></app-header>
+<!-- <app-header></app-header> -->
+<app-header />
+
+<main>
+    <ul id="users">
+        <li>
+            <app-user [users]="users[0]" (select)="onSelectUser($event)" />
+        </li>
+        <li>
+            <app-user [users]="users[1]" (select)="onSelectUser($event)" />
+        </li>
+        <li>
+            <app-user [users]="users[2]" (select)="onSelectUser($event)" />
+        </li>
+        <li>
+            <app-user [users]="users[3]" (select)="onSelectUser($event)" />
+        </li>
+    </ul>
+</main>
