@@ -34,7 +34,7 @@ export class UserComponent {
   // @Input({ required: true }) id!: string;
   // @Input({ required: true }) avatar!: string;
   // @Input({ required: true }) name!: string;
-  @Input({ required: true }) users!: User;
+  @Input({ required: true }) user!: User;
   // @Input({ required: true }) users!: {
   //   id: string;
   //   avatar: string;
@@ -43,7 +43,7 @@ export class UserComponent {
   @Output() select = new EventEmitter<string>(); // EventEmitter();
   
   get imagePath() {
-    return 'users/' + this.users.avatar;
+    return 'users/' + this.user.avatar;
   }
 
   // using signal
@@ -55,7 +55,7 @@ export class UserComponent {
   // select = output<string>();
 
   onSelectUser() {
-    this.select.emit(this.users.id);
+    this.select.emit(this.user.id);
 
     // without using signal
     // const randomIndex = Math.floor(Math.random() * DUMMY_USERS.length);
